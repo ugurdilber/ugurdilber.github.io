@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ayyucekizrak.com)",
+      "WebFetch(domain:www.linkedin.com)"
+    ]
+  }
+}

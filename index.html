@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Uğur Dilber — Digital Transformation, IoT & AI Product Management. MIS & Computer Engineering student at Istanbul Bilgi University."
+        />
+        <title>Uğur Dilber</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- ========== NAVBAR ========== -->
+        <nav class="navbar">
+            <a href="#" class="navbar-brand">Uğur Dilber</a>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                &#9776;
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+
+        <!-- ========== HERO ========== -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>About Uğur</h1>
+            </div>
+        </header>
+
+        <!-- ========== ABOUT ========== -->
+        <section id="about" class="about-page">
+
+            <!-- Photo + name + titles: visible on first load -->
+            <div class="about-top">
+                <div class="about-centered">
+                    <div class="about-photo-wrap">
+                        <img class="profile-photo" src="placeholder-images/IMG_5030.jpg" alt="Uğur Dilber" />
+                    </div>
+                    <hr class="about-divider">
+                    <p class="about-name">Uğur Dilber, B.S.</p>
+                    <hr class="about-divider">
+                    <p class="about-title-main">MIS &amp; CENG &mdash; Istanbul Bilgi University</p>
+                    <p class="about-title-sub">Digital Transformation &nbsp;&middot;&nbsp; Project Management<br>AI Product Management &nbsp;&middot;&nbsp; Business Analytics</p>
+                </div>
+            </div>
+
+            <!-- Bio: only visible on scroll -->
+            <div class="about-bio-block">
+                <hr class="about-divider">
+                <div class="about-bio">
+                    <p>Fourth-year Management Information Systems student at Istanbul Bilgi University with a minor in Computer Engineering, focused on digital transformation and connected systems.</p>
+                    <p>Experienced in IoT and process improvement, Agile project coordination, and data-driven teamwork. Passionate about data-driven strategy, healthcare innovation, and engineering excellence. Licensed Latin dance athlete with proven discipline and adaptability — <strong>5 Gold, 1 Silver, 2 Bronze Medals</strong> at the Turkish Dance Sports Federation.</p>
+                </div>
+                <a href="resume.html" class="btn btn-solid about-resume-btn">View Full Resume &rarr;</a>
+            </div>
+
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="about-footer">
+            <ul class="about-footer-socials">
+                <li><a href="https://www.linkedin.com/in/ugur-dilber-02588921b/" target="_blank" rel="noopener noreferrer"><img src="placeholder-images/icon-logo-linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/skjota" target="_blank" rel="noopener noreferrer"><img src="placeholder-images/211904_social_github_icon.png" alt="GitHub"></a></li>
+                <li><a href="https://www.kaggle.com/uurdilber" target="_blank" rel="noopener noreferrer"><img src="placeholder-images/4373210_kaggle_logo_logos_icon.png" alt="Kaggle"></a></li>
+                <li><a href="https://medium.com/@ugurdilber1" target="_blank" rel="noopener noreferrer"><img src="placeholder-images/icon-logo-medium.png" alt="Medium"></a></li>
+                <li><a href="https://www.youtube.com/@ugurdilber_/featured" target="_blank" rel="noopener noreferrer" class="about-footer-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="currentColor" aria-label="YouTube"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+                <li><a href="https://www.instagram.com/ugurdilber_/" target="_blank" rel="noopener noreferrer"><img src="placeholder-images/icon-logo-instagram.png" alt="Instagram"></a></li>
+            </ul>
+            <p class="about-footer-text">Istanbul, Türkiye &nbsp;&middot;&nbsp; <a href="mailto:ugurdilber1@gmail.com">ugurdilber1@gmail.com</a></p>
+        </footer>
+
+        <script>
+            var hamburger = document.querySelector(".hamburger");
+            var navLinks = document.querySelector(".nav-links");
+            var navbar = document.querySelector(".navbar");
+            hamburger.addEventListener("click", function () {
+                navLinks.classList.toggle("open");
+            });
+            navLinks.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    navLinks.classList.remove("open");
+                });
+            });
+
+            // Hide navbar on scroll down, show on scroll up
+            var lastScrollY = window.pageYOffset;
+            window.addEventListener("scroll", function () {
+                var currentScrollY = window.pageYOffset;
+                if (currentScrollY > lastScrollY && currentScrollY > 62) {
+                    navbar.classList.add("navbar--hidden");
+                } else {
+                    navbar.classList.remove("navbar--hidden");
+                }
+                lastScrollY = currentScrollY;
+            }, { passive: true });
+        </script>
+    </body>
+</html>
